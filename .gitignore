@@ -1,0 +1,26 @@
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+hs_err_pid*
+replay_pid*
+
+# OS files
+.DS_Store
+Thumbs.db
