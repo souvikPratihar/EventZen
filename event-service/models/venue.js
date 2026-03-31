@@ -1,31 +1,38 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
-const Venue = sequelize.define('Venue', {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
+const Venue = sequelize.define(
+    'Venue',
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        name: {
+            type: DataTypes.STRING
+        },
+        location: {
+            type: DataTypes.STRING
+        },
+        capacity: {
+            type: DataTypes.INTEGER
+        },
+        price: {
+            type: DataTypes.FLOAT
+        },
+        phoneNumber: {
+            type: DataTypes.STRING
+        },
+        isAvailable: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
+        }
     },
-    name: {
-        type: DataTypes.STRING
-    },
-    location: {
-        type: DataTypes.STRING
-    },
-    capacity: {
-        type: DataTypes.INTEGER
-    },
-    price: {
-        type: DataTypes.FLOAT
-    },
-    phoneNumber: {
-        type: DataTypes.STRING
-    },
-    isAvailable: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true
+    {
+        tableName: 'venues',
+        freezeTableName: true
     }
-});
+);
 
 module.exports = Venue;

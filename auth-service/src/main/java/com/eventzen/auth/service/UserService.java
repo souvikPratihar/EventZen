@@ -28,9 +28,8 @@ public class UserService {
             throw new RuntimeException("Email already registered");
         }
 
-        if (user.getRole() == null) {
-            user.setRole(Role.CUSTOMER);
-        }
+        // public registration to Customerrole  only
+        user.setRole(Role.CUSTOMER);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 

@@ -16,6 +16,9 @@ target/
 .env
 .env.*
 
+# allow example env
+!.env.example
+
 # Logs
 *.log
 hs_err_pid*
