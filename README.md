@@ -41,6 +41,9 @@ It includes:
 ---
 
 ## 📁 Project Structure
+
+```text
+
 EventZen/
 │
 ├── auth-service/
@@ -52,9 +55,7 @@ EventZen/
 ├── .env.example
 ├── README.md
 └── .gitignore
-
-
----
+```
 
 ## ✨ Features
 
@@ -80,6 +81,7 @@ EventZen/
 ---
 
 ## 🐳 Docker Architecture
+```text
 Frontend (React)
 ↓
 Auth Service (Spring Boot)
@@ -87,7 +89,7 @@ Auth Service (Spring Boot)
 MySQL
 ↑
 Event Service (Node.js)
-
+```
 
 ---
 
@@ -98,39 +100,42 @@ Event Service (Node.js)
 ```bash
 git clone https://github.com/souvikPratihar/EventZen.git
 cd EventZen
-
+```
 ### 🔹 Step 2: Setup Environment
-
+```bash
 copy .env.example .env
-
+```
 
 ### 🔹 Step 3: Run using Docker
-
+```bash
 docker compose up --build
-
+```
 
 ### 🔹 Step 4: Access Application
 
-Service	URL
-Frontend	http://localhost:5173
 
-Auth Service	http://localhost:8080
+### Service	URL
 
-Event Service	http://localhost:5000
+- Frontend	http://localhost:5173
+
+- Auth Service	http://localhost:8080
+
+- Event Service	http://localhost:5000
 
 ---
 
 ## 🗄️ Database
-Preloaded using:
+- Preloaded using:
+```bash
 mysql-init/eventzen_dump.sql
+```
+- ✔ No manual setup required
+- ✔ Data (events, vendors, venues) already present
 
-✔ No manual setup required
-✔ Data (events, vendors, venues) already present
 
 
-
-🔐 Environment Variables
-
+## 🔐 Environment Variables
+```bash
 MYSQL_DATABASE=eventzen_auth
 MYSQL_ROOT_PASSWORD=root
 
@@ -147,58 +152,57 @@ JWT_SECRET=TXlTdXBlclNlY3JldEtleUZvckpXVFNpZ25pbmdNeVN1cGVyU2VjcmV0S2V5
 
 SERVER_PORT=8080
 EVENT_SERVICE_PORT=5000
+```
+
+
+## 🔑 Default Admin Login
+- Email: admin@gmail.com
+- Password: 1234
 
 
 
-🔑 Default Admin Login
-Email: admin@gmail.com
-Password: 1234
-
-
-
-📸 Screenshots
-🔹 Create Event - by Customer
+## 📸 Screenshots
+### 🔹 Create Event - by Customer
 ![Event Creation by Customer](./EventZen_Screenshots/Customer_CreateEvent.png)
 
-🔹 Customer Profile - Booked Events
+### 🔹 Customer Profile - Booked Events
 ![Events Booked by Customer](./EventZen_Screenshots/Customer_Profile_MyBookings.png)
 
-🔹 Customer Profile - Created Events
+### 🔹 Customer Profile - Created Events
 ![Events Created by Customer](./EventZen_Screenshots/Customer_Profile_MyEvents.png)
 
-
-🔹 Admin Dashboard - Event Management
+### 🔹 Admin Dashboard - Event Management
 ![All the Events](./EventZen_Screenshots/Admin_ManageEvents.png)
 
-🔹 Admin Dashboard - Venue Management
+### 🔹 Admin Dashboard - Venue Management
 ![All the Venues](./EventZen_Screenshots/Admin_ManageVenues.png)
 
 
 
-⚠️ Important Notes
-.env is NOT uploaded (security)
-.env.example is used for setup
-Docker handles MySQL internally
+## ⚠️ Important Notes
+- .env is NOT uploaded (security)
+- .env.example is used for setup
+- Docker handles MySQL internally
 
 
 
-🧠 Learning Outcomes
-Microservices architecture
-JWT authentication
-Docker deployment
-Full-stack integration
+## 🧠 Learning Outcomes
+- Microservices architecture
+- Docker deployment
+- JWT authentication
+- Full-stack integration
 
 
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Souvik Pratihar
-B.Tech CSE
+### **Souvik Pratihar**
+### B.Tech CSE
 
-⭐ Final Note
+## ⭐ Final Note
 
-This project demonstrates:
+**This project demonstrates:**
 
-Real-world architecture
-Clean UI/UX
-Docker-based deployment
+- Real-world architecture
+- Clean UI/UX
+- Docker-based deployment
